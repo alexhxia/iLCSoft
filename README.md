@@ -24,7 +24,7 @@ $ source /home/ilc/ilcsoft/v02-02/init_ilcsoft.sh
 La documentation et le packet git du format de données LCIO 
 https://github.com/iLCSoft/LCIO
 et de la librairie Marlin
-$ https://github.com/iLCSoft/Marlin
+https://github.com/iLCSoft/Marlin
 
 
 ### Travail à effectuer
@@ -38,6 +38,6 @@ https://tel.archives-ouvertes.fr/tel-03405418
 
 # Pour la deuxième partie du stage,
 le software en développement : 
-$ https://github.com/key4hep
+https://github.com/key4hep
 et plus particulièrement l'adaptateur ilcsoft vers key4hep : 
-$ https://github.com/key4hep/k4MarlinWrapper
+https://github.com/key4hep/k4MarlinWrapper
