@@ -131,3 +131,41 @@ root -l
 ```
 .x ./draw_simhits.C("../StandardReco_LCTuple.root")
 ```
+
+```
+gSystem->Load("$LCIO/lib/liblcioDict.so");
+```
+#### Lecture d'un fichier slcio avec ROOT
+Depuis le dossier `ILDConfig/StandardConfig/production/`
+```
+touch read_slcio.C
+```
+Écrire dans ce fichier 
+```
+#ifdef __CLING__
+R__LOAD_LIBRARY(liblcioDict);
+#endif
+
+#include "IO/LCReader.h"
+#include "EVENT/MCParticle.h"
+#include "IOIMPL/LCFactory.h"
+#include "UTIL/LCIterator.h"
+#include "lcio.h"
+
+#include <iostream>
+
+void read_slcio() {
+    using namespace lcio;
+    auto* lcReader = IOIMPL::LCFactory::getInstance()->createLCReader();
+    lcReader->open("bbudsc_3evt_SIM.slcio");
+
+    while(auto* evt = lcReader->readNextEvent()) {
+        LCIterator<MCParticle> mcParticles(evt, "MCParticle");
+        std::cout << mcParticles.size() << std::endl;
+    }
+}
+```
+Exécuter 
+```
+root -l read_slcio.C
+```
