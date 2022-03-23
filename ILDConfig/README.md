@@ -241,12 +241,32 @@ sed -i 's/MyProcessor/NewProcessorName/g' include/NewProcessorName.h
 ```
 sed -i 's/MyProcessor/NewProcessorName/g' src/NewProcessorName.cc
 ```
+``` 
+cd build 
 ```
-rm -R build
+```
+rm -R *
+```
+``` 
+cmake -C $ILCSOFT/ILCSoft.cmake .. 
+```
+``` 
+make install 
 ```
 ```
 export MARLIN_DLL=$MARLIN_DLL:$PWD/../lib/libNewProcessorName.so
 ```
 ```
 MARLIN_DLL=$PWD/../lib/libNewProcessorName.so Marlin -x > mysteer.xml
+```
+## Marlin processor
+
+### Exercice 4
+Se placer dans le dossier `StandardConfig/production/mymarlin`.
+
+Décommanter la ligne `FIND PACKAGE( AIDA ) du fichier `CMakeLists.txt`
+
+Ajouter après le ligne 114 :
+```
+
 ```
