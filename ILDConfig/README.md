@@ -76,6 +76,10 @@ for evt in rdr:
     for p in col:
         print(p.getEnergy())
 ```
+Exécuter :
+```
+python dumplcio.py bbudsc_3evt_SIM.slcio
+```
 ### Exercice 3
 Modifier pour afficher les énergies totales par évènement.
 ```
@@ -93,4 +97,7 @@ for evt in rdr:
         s = s + p.getEnergy()
     print(s)
 ```
-
+Exécuter :
+```
+python dumplcio.py bbudsc_3evt_SIM.slcio
+```
