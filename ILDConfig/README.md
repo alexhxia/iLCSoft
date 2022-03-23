@@ -5,17 +5,28 @@ https://agenda.linearcollider.org/event/9272/
 ## Installation
 ```
 git clone https://github.com/iLCSoft/ILDConfig.git -b v02-02-02
+```
+```
 cd ILDConfig
+```
+```
 . /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-02/init_ilcsoft.sh
 ```
 
 ## Test 
 ```
 ddsim -h
+```
+```
 Marlin -h
+```
+```
 dumpevent -h 
+```
+```
 g++ -v
-
+```
+```
 find $ILCSOFT -maxdepth 2 -mindepth 2
 ```
 
@@ -34,13 +45,19 @@ ddsim --inputFiles Examples/bbudsc_3evt/bbudsc_3evt.stdhep --outputFile=./bbudsc
 ## Fichiers LCIO
 ```
 anajob bbudsc_3evt_SIM.slcio
+```
+```
 dumpevent bbudsc_3evt_SIM.slcio 2 | less
 ```
 
 ### Exercice 2
 ``` 
 LCIO_READ_COL_NAMES="HCalBarrelRPCHits HCalECRingRPCHits HCalEndcapRPCHits"; dumpevent bbudsc_3evt_SIM.slcio 2 | less
+```
+```
 export LCIO_READ_COL_NAMES="HCalBarrelRPCHits HCalECRingRPCHits HCalEndcapRPCHits"
+```
+```
 dumpevent bbudsc_3evt_SIM.slcio 2 | less
 ```
 
