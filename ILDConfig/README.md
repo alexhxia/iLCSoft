@@ -112,8 +112,20 @@ Marlin MarlinStdReco.xml \
 ```
 
 ### Analyse ROOT
-Création d'un arbre ROOT
+
+####Création d'un arbre ROOT :
 ```
-Marlin --global.LCIOInputFiles=bbudsc_3evt_REC.slcio \
-MarlinStdRecoLCTuple.xml
+Marlin --global.LCIOInputFiles=bbudsc_3evt_REC.slcio MarlinStdRecoLCTuple.xml
+```
+Création du fichier `StandardReco_LCTuple.root`
+
+#### Analyse ROOT
+```
+cd RootMacros
+```
+```
+root -l
+```
+```
+root [0] .x ./draw_simhits.C("../StandardReco_LCTuple.root")
 ```
