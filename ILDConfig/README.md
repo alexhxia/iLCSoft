@@ -54,17 +54,6 @@ pi+ avec angle
 Modifier le programme `ddsim_steer.py`, des lignes 186-195 :
 
 ```
-SIM.gun.particle = "mu-"
-SIM.gun.phiMax = None
-
-## Minimal azimuthal angle for random distribution
-SIM.gun.phiMin = None
-
-SIM.gun.thetaMax = None
-SIM.gun.thetaMin = None
-```
-
-```
 SIM.gun.particle = "pi+"
 SIM.gun.phiMax = 3.14
 
@@ -74,11 +63,14 @@ SIM.gun.phiMin = 0
 SIM.gun.thetaMax = 2 * 3.14
 SIM.gun.thetaMin = 0
 ```
-
+Exécution :
 ```
 ddsim --inputFiles Examples/bbudsc_3evt/bbudsc_3evt.stdhep --outputFile=./bbudsc_3evt_SIM.slcio --compactFile $lcgeo_DIR/ILD/compact/ILD_l5_v02/ILD_l5_v02.xml --steeringFile=./ddsim_steer.py > ddsim.out 2>&1 &    
 ```
-
+NB : L'exécution s'effectue en arrière plan et le fichier de sortie sera `ddsim.out`. Pour suivre son avancement : 
+```
+ps
+```
 ## Fichiers LCIO
 ```
 anajob bbudsc_3evt_SIM.slcio
