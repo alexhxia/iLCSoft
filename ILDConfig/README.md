@@ -53,7 +53,7 @@ ddsim --inputFiles Examples/bbudsc_3evt/bbudsc_3evt.stdhep --outputFile=./bbudsc
 pi+ avec angle
 Modifier le programme `ddsim_steer.py`, des lignes 186-195 :
 
-``
+```
 SIM.gun.particle = "mu-"
 SIM.gun.phiMax = None
 
@@ -62,7 +62,7 @@ SIM.gun.phiMin = None
 
 SIM.gun.thetaMax = None
 SIM.gun.thetaMin = None
-``
+```
 
 ```
 SIM.gun.particle = "pi+"
