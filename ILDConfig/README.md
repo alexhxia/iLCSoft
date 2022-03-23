@@ -199,4 +199,12 @@ Exécuter
 root -l read_slcio.C
 ```
 # Section 3 Création de notre package Marlin
+Depuis le dossier `ILDConfig/StandardConfig/production/`
 
+``` cp -rp $MARLIN/examples/mymarlin .```
+``` cd mymarlin ```
+``` mkdir build && cd build ```
+``` cmake -C $ILCSOFT/ILCSoft.cmake .. ```
+``` make install ```
+``` export MARLIN_DLL=$MARLIN_DLL:$PWD/../lib/libmymarlin.so ```
+``` MARLIN_DLL=$PWD/../lib/libmymarlin.so Marlin -x > mysteer.xml```
