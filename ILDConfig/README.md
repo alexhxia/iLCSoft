@@ -14,9 +14,13 @@ Marlin : https://ilcsoft.desy.de/Marlin/current/doc/html/index.html
 ```
 git clone https://github.com/iLCSoft/ILDConfig.git -b v02-02-02
 ```
+
+# Section 2 Premier pas
 ```
 cd ILDConfig
 ```
+## Initialisation des paramètres
+(À refaire à chaque fois que l'on redémarre)
 ```
 . /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-02/init_ilcsoft.sh
 ```
@@ -38,7 +42,8 @@ g++ -v
 find $ILCSOFT -maxdepth 2 -mindepth 2
 ```
 
-## Run simulation
+## Run simulation 
+Depuis le dossier `ILDConfig/StandardConfig/production/`
 Muon sans angle
 ```
 ddsim --inputFiles Examples/bbudsc_3evt/bbudsc_3evt.stdhep --outputFile=./bbudsc_3evt_SIM.slcio --compactFile $lcgeo_DIR/ILD/compact/ILD_l5_v02/ILD_l5_v02.xml --steeringFile=./ddsim_steer.py > ddsim.out 2>&1 &    
@@ -46,6 +51,31 @@ ddsim --inputFiles Examples/bbudsc_3evt/bbudsc_3evt.stdhep --outputFile=./bbudsc
 
 ### Exercice 1
 pi+ avec angle
+Modifier le programme `ddsim_steer.py` :
+
+les lignes 186-195 :
+`
+SIM.gun.particle = "mu-"
+SIM.gun.phiMax = None
+
+## Minimal azimuthal angle for random distribution
+SIM.gun.phiMin = None
+
+SIM.gun.thetaMax = None
+SIM.gun.thetaMin = None
+`
+
+```
+SIM.gun.particle = "pi+"
+SIM.gun.phiMax = 3.14
+
+## Minimal azimuthal angle for random distribution
+SIM.gun.phiMin = 0
+
+SIM.gun.thetaMax = 2 * 3.14
+SIM.gun.thetaMin = 0
+```
+
 ```
 ddsim --inputFiles Examples/bbudsc_3evt/bbudsc_3evt.stdhep --outputFile=./bbudsc_3evt_SIM.slcio --compactFile $lcgeo_DIR/ILD/compact/ILD_l5_v02/ILD_l5_v02.xml --steeringFile=./ddsim_steer.py > ddsim.out 2>&1 &    
 ```
