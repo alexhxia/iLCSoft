@@ -5,6 +5,7 @@ Stage de M2 à l'IP2I
 https://agenda.linearcollider.org/event/9272/
 
 ### Initialisation ilcsoft :
+(À refaire chaque fois)
 ```
 $ source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
 ```
