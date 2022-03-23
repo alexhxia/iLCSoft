@@ -61,6 +61,7 @@ export LCIO_READ_COL_NAMES="HCalBarrelRPCHits HCalECRingRPCHits HCalEndcapRPCHit
 dumpevent bbudsc_3evt_SIM.slcio 2 | less
 ```
 ## Lire LCIO avec Python
+Depuis le dossier `ILDConfig/StandardConfig/production/`
 ```
 touch dumplcio.py
 ```
