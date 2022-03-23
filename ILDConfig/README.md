@@ -245,4 +245,8 @@ sed -i 's/MyProcessor/NewProcessorName/g' src/NewProcessorName.cc
 rm -R build
 ```
 ```
+export MARLIN_DLL=$MARLIN_DLL:$PWD/../lib/libNewProcessorName.so
+```
+```
+MARLIN_DLL=$PWD/../lib/libNewProcessorName.so Marlin -x > mysteer.xml
 ```
