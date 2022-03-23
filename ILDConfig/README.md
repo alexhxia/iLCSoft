@@ -28,3 +28,18 @@ pi+ avec angle
 ```
 ddsim --inputFiles Examples/bbudsc_3evt/bbudsc_3evt.stdhep --outputFile=./bbudsc_3evt_SIM.slcio --compactFile $lcgeo_DIR/ILD/compact/ILD_l5_v02/ILD_l5_v02.xml --steeringFile=./ddsim_steer.py > ddsim.out 2>&1 &    
 ```
+
+## Fichiers LCIO
+```
+anajob bbudsc_3evt_SIM.slcio
+dumpevent bbudsc_3evt_SIM.slcio 2 | less
+```
+
+### Exercice 2
+``` 
+LCIO_READ_COL_NAMES="HCalBarrelRPCHits HCalECRingRPCHits HCalEndcapRPCHits"; dumpevent bbudsc_3evt_SIM.slcio 2 | less
+export LCIO_READ_COL_NAMES="HCalBarrelRPCHits HCalECRingRPCHits HCalEndcapRPCHits"
+dumpevent bbudsc_3evt_SIM.slcio 2 | less
+```
+
+
