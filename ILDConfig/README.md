@@ -60,5 +60,37 @@ export LCIO_READ_COL_NAMES="HCalBarrelRPCHits HCalECRingRPCHits HCalEndcapRPCHit
 ```
 dumpevent bbudsc_3evt_SIM.slcio 2 | less
 ```
+## Lire LCIO avec Python
+```
+touch dumplcio.py
+```
+Y copier
+```
+from pyLCIO import UTIL, EVENT, IMPL, IO, IOIMPL
+import sys
+infile = sys.argv[1]
+rdr = IOIMPL.LCFactory.getInstance().createLCReader( )
+rdr.open( infile )
+for evt in rdr:
+    col = evt.getCollection("MCParticle")
+    for p in col:
+        print(p.getEnergy())
+```
+### Exercice 3
+Modifier pour afficher les énergies totales par évènement.
+```
+from pyLCIO import UTIL, EVENT, IMPL, IO, IOIMPL
+import sys
 
+infile = sys.argv[1]
+rdr = IOIMPL.LCFactory.getInstance().createLCReader( )
+rdr.open(infile)
+
+for evt in rdr:
+    col = evt.getCollection("MCParticle")
+    s = 0.
+    for p in col:
+        s = s + p.getEnergy()
+    print(s)
+```
 
