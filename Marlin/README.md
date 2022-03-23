@@ -1,4 +1,4 @@
-# Marlin
+# ILDConfig
 
 ## Installation
 ```
