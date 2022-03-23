@@ -101,3 +101,18 @@ Exécuter :
 ```
 python dumplcio.py bbudsc_3evt_SIM.slcio
 ```
+## Reconstruction
+```
+Marlin MarlinStdReco.xml \
+    --constant.lcgeo_DIR=$lcgeo_DIR \
+    --constant.DetectorModel=ILD_l5_o1_v02 \
+    --constant.OutputBaseName=bbudsc_3evt \
+    --global.LCIOInputFiles=bbudsc_3evt_SIM.slcio \
+    > marlin.out 2>&1 &
+```
+
+### Analyse ROOT
+Création d'un arbre ROOT
+`Marlin --global.LCIOInputFiles=bbudsc_3evt_REC.slcio \
+MarlinStdRecoLCTuple.xml
+`
