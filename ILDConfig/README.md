@@ -1,5 +1,7 @@
 # ILDConfig
 
+https://agenda.linearcollider.org/event/9272/
+
 ## Installation
 ```
 git clone https://github.com/iLCSoft/ILDConfig.git -b v02-02-02
