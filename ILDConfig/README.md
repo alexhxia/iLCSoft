@@ -126,6 +126,7 @@ cd RootMacros
 ```
 root -l
 ```
+`root [0] .x ./draw_simhits.C("../StandardReco_LCTuple.root")`
 ```
-root [0] .x ./draw_simhits.C("../StandardReco_LCTuple.root")
+.x ./draw_simhits.C("../StandardReco_LCTuple.root")
 ```
