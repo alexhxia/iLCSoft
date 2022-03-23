@@ -17,7 +17,7 @@ g++ -v
 find $ILCSOFT -maxdepth 2 -mindepth 2
 ```
 
-## 1er simu
+## Run simulation
 Muon sans angle
 ```
 ddsim --inputFiles Examples/bbudsc_3evt/bbudsc_3evt.stdhep --outputFile=./bbudsc_3evt_SIM.slcio --compactFile $lcgeo_DIR/ILD/compact/ILD_l5_v02/ILD_l5_v02.xml --steeringFile=./ddsim_steer.py > ddsim.out 2>&1 &    
