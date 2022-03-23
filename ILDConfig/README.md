@@ -199,6 +199,8 @@ Exécuter
 root -l read_slcio.C
 ```
 # Section 3 Création de notre package Marlin
+
+## Construction
 Depuis le dossier `ILDConfig/StandardConfig/production/`
 
 ``` 
@@ -221,4 +223,26 @@ export MARLIN_DLL=$MARLIN_DLL:$PWD/../lib/libmymarlin.so
 ```
 ``` 
 MARLIN_DLL=$PWD/../lib/libmymarlin.so Marlin -x > mysteer.xml
+```
+
+## Creation
+Depuis le dossier `ILDConfig/StandardConfig/production/`
+Modifier le fichier `CMakeList.txt`, `PROJECT(mymarlin)` en `PROJECT(NewProcessorName)`
+
+```
+mv include/MyProcessor.h include/NewProcessorName.h
+```
+```
+mv src/MyProcessor.cc src/NewProcessorName.cc
+```
+```
+sed -i 's/MyProcessor/NewProcessorName/g' include/NewProcessorName.h
+```
+```
+sed -i 's/MyProcessor/NewProcessorName/g' src/NewProcessorName.cc
+```
+```
+rm -R build
+```
+```
 ```
