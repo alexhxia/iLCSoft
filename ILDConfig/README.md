@@ -111,9 +111,9 @@ Marlin MarlinStdReco.xml \
     > marlin.out 2>&1 &
 ```
 
-### Analyse ROOT
+### Arbre ROOT
 
-####Création d'un arbre ROOT :
+#### Création d'un arbre ROOT :
 ```
 Marlin --global.LCIOInputFiles=bbudsc_3evt_REC.slcio MarlinStdRecoLCTuple.xml
 ```
