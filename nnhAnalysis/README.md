@@ -1,12 +1,7 @@
 # nnhAnalysis
 
-La copie des fichiers est dans le dossier ` /gridgroup/ilc/nnhAnalysisFiles/` qui contient des dossiers au numéro des processus.
-
 ```
-cd  /gridgroup/ilc/nnhAnalysisFiles/
-```
-```
-/gridgroup/ilc/nnhAnalysisFiles/
+/gridgroup/ilc/nnhAnalysisFiles/AHCAL/
 ```
 Exemple d'un nom d'un fichier type :
 ```
