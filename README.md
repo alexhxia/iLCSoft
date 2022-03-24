@@ -7,18 +7,18 @@ https://agenda.linearcollider.org/event/9272/
 ### Initialisation ilcsoft :
 (À refaire chaque fois)
 ```
-$ source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
+source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
 ```
 
 Pour essayer ilcsoft sans faire toute l'installation, on peut utiliser un container docker. 
 Sous linux, une fois "docker engine" installé, il suffit de tourner la commande :
 
 ```
-$ docker run -it ilcsoft/ilcsoft-centos7-gcc8.2:v02-02 bash
+docker run -it ilcsoft/ilcsoft-centos7-gcc8.2:v02-02 bash
 ```
 Puis dans le container, on initialise ilcsoft avec :
 ```
-$ source /home/ilc/ilcsoft/v02-02/init_ilcsoft.sh 
+source /home/ilc/ilcsoft/v02-02/init_ilcsoft.sh 
 ```
 
 ### Documentation
