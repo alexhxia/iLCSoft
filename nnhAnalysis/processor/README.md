@@ -28,3 +28,10 @@ On lance le programme qui transforme un fichier .slcio et fichier .root
 ```
 Marlin NNH_steer.xml 
 ```
+Vérifier le contenu du nouveau fichier .root
+```
+root -l
+TFile *f = TFile::open("XXX.root")
+f->ls()
+tree->Scan()
+```
