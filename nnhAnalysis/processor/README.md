@@ -6,6 +6,9 @@ Télécharger le git du programme de la branch `refractor`
 ```
 git clone -branch refractor https://github.com/ggarillot/nnhAnalysis.git
 ```
+```
+export NNH_HOME=$PWD/nnhAnalysis  
+```
 
 ```
 cd nnhAnalysis/processor
