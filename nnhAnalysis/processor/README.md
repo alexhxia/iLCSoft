@@ -22,7 +22,7 @@ export MARLIN_DLL=$MARLIN_DLL:$PWD/lib/libnnhProcessor.so
 ```
 cd script/
 ```
-Remplacer les fichiers `input.slcio` et `output.root` par les noms souhaité.
+Remplacer les fichiers `input.slcio` et `output.root` par les noms souhaités.
 
 On lance le programme qui transforme un fichier .slcio et fichier .root
 ```
@@ -35,3 +35,4 @@ TFile *f = TFile::open("XXX.root")
 f->ls()
 tree->Scan()
 ```
+## Sur plusieurs fichiers
