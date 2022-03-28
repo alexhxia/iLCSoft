@@ -36,9 +36,7 @@ export NNH_ANALYSIS_OUTFILES=$NNH_HOME/output
 ```
 export MARLIN_DLL=$MARLIN_DLL:$PWD/lib/libnnhProcessor.so
 ```
-
-
-## Avec un fichier
+## Convertir un seul fichier
 ```
 cd $NNH_HOME/processor/script/
 ```
@@ -55,7 +53,7 @@ TFile *f = TFile::open("XXX.root")
 f->ls()
 tree->Scan()
 ```
-## Sur plusieurs fichiers
+## Convertir plusieurs processus
 ```
 cd $NNH_HOME/processor/script
 ```
@@ -64,9 +62,12 @@ Exemple pour les processus `402007` `402008` :
 ```
 $ python3 launchNNHProcessor.py -n 10 -p 402007 402008 -i $NNH_ANALYSIS_INPUTFILES -o NNH_ANALYSIS_OUTFILES
 ```
-### Pour tous les processus :
+### Convertir tous les processus
+```
+cd $NNH_HOME/processor/script
+```
 ```
 $ python3 launchNNHProcessor.py -n 10 -i $NNH_ANALYSIS_INPUTFILES -o NNH_ANALYSIS_OUTFILES
 ```
-## Suite 
+# Suite 
 Continuer dans la partie `analysis`.
