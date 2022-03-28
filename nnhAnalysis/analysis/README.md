@@ -39,7 +39,7 @@ make install
 ## Exécution 
 `exec/prepareForBDT.cxx` :
 ```
-cd $NNH_HOME/analysis/exe
+cd $NNH_HOME/analysis
 ```
 ```
 ./bin/prepareForBDT
