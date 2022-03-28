@@ -35,7 +35,7 @@ make install
 ### Pré-requis 
 Les paquets `joblib`, `pandas`, `numpy`, `scipy`, `sklearn` et `ROOT`
 
-### Problème ROOT
+### Cas de ROOT
 
 ### Lancement
 Depuis le dossier `analysis/python` :
