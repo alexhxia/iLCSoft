@@ -1,11 +1,12 @@
 # analysis 
 
-Avant d'exécuter `analysis` il faut avoir générer les fichiers root avec `processor`.
+Avant d'exécuter `analysis` il faut avoir générer les fichiers root avec `processor`, et redémarrer la session car la commande 
+`source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh`
+ne doit pas être exécuter. 
+
+Il faut un environnement au moins sous `python 3.9` et avec `root`.
 
 ## Préparation de l'environnement
-```
-source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
-```
 ```
 export NNH_HOME=~/nnhAnalysis
 ```
@@ -15,7 +16,6 @@ mkdir $NNH_HOME/analysis/DATA $NNH_HOME/analysis/Build
 ```
 hadd $NNH_HOME/analysis/DATA/DATA.root $NNH_HOME/output/*.root
 ```
-
 ## Compilation
 ```
 cd $NNH_HOME/analysis/Build
@@ -42,8 +42,6 @@ Les paquets `joblib`, `pandas`, `numpy`, `scipy`, `sklearn`, `cppyy`, `libPyROOT
 ```
 pip install joblib pandas numpy scipy sklearn cppyy
 ```
-### Cas de ROOT
-
 ### Lancement
 Depuis le dossier `analysis/python` :
 ```
