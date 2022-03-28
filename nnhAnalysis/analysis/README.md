@@ -47,7 +47,7 @@ cd $NNH_HOME/analysis
 ### Pré-requis 
 Les paquets `joblib`, `pandas`, `numpy`, `scipy`, `sklearn`, `cppyy`, `libPyROOT` et `ROOT`
 ```
-pip install joblib pandas numpy scipy sklearn cppyy
+install joblib pandas numpy scipy sklearn cppyy
 ```
 ### Lancement
 Depuis le dossier `analysis/python` :
