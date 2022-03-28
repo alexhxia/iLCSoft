@@ -1,17 +1,50 @@
 # Analysis 
 
+## Préparation de l'environnement
 ```
-export NNH_HOME=/home/ilc/ahocine/nnhAnalysis
+source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
 ```
 ```
-mkdir $NNH_HOME/analysis/DATA
+export NNH_HOME=~/nnhAnalysis
+```
+```
+mkdir $NNH_HOME/analysis/DATA $NNH_HOME/analysis/Build
 ```
 ```
 hadd $NNH_HOME/analysis/DATA/DATA.root $NNH_HOME/output/*.root
 ```
 
-
-
+## Compilation
+```
+cd $NNH_HOME/analysis/Build
+```
+```
+cmake -C $ILCSOFT/ILCSoft.cmake ..
+```
+```
+make
+```
+```
+make install
+```
+## Exécution 
+`exec/prepareForBDT.cxx` :
 ```
 ./bin/prepareForBDT
+```
+### Pré-requis 
+Les paquets `joblib`, `pandas`, `numpy`, `scipy`, `sklearn` et `ROOT`
+
+### Problème ROOT
+
+### Lancement
+Depuis le dossier `analysis/python` :
+```
+cd $NNH_HOME/analysis/python
+```
+```
+python3 python/launchBDT_bb.py
+```
+```
+python3 python/launchBDT_WW.py
 ```
