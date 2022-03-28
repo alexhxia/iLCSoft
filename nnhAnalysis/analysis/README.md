@@ -43,8 +43,8 @@ Depuis le dossier `analysis/python` :
 cd $NNH_HOME/analysis/python
 ```
 ```
-python3 python/launchBDT_bb.py
+python3 launchBDT_bb.py
 ```
 ```
-python3 python/launchBDT_WW.py
+python3 launchBDT_WW.py
 ```
