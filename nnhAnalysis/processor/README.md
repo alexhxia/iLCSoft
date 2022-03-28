@@ -59,6 +59,9 @@ f->ls()
 tree->Scan()
 ```
 ## Sur plusieurs fichiers
+```
+cd $NNH_HOME/analysis/script
+```
 Exemple pour les processus `402007` `402008` :
 ```
 $ python3 launchNNHProcessor.py -n 10 -p 402007 402008 -i $NNH_ANALYSIS_INPUTFILES -o NNH_ANALYSIS_OUTFILES
