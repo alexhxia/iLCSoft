@@ -1,8 +1,6 @@
 # analysis 
 
-Avant d'exécuter `analysis` il faut avoir générer les fichiers root avec `processor`, et redémarrer la session car la commande 
-`source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh`
-ne doit pas être exécuter. 
+Avant d'exécuter `analysis` il faut avoir générer les fichiers root avec `processor`.
 
 Il faut un environnement au moins sous `python 3.9` et avec `root`.
 
@@ -21,6 +19,9 @@ mkdir $NNH_HOME/analysis/DATA $NNH_HOME/analysis/Build
 ```
 ```
 hadd $NNH_HOME/analysis/DATA/DATA.root $NNH_HOME/output/*.root
+```
+```
+source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
 ```
 ## Compilation
 ```
@@ -53,6 +54,9 @@ Depuis le dossier `analysis/python` :
 ```
 cd $NNH_HOME/analysis/python
 ```
+#### Attention redémarrer la session car la commande 
+`source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh`
+ne doit pas avoir été exécuter. 
 ```
 python3 launchBDT_bb.py
 ```
