@@ -32,6 +32,9 @@ make install
 ## Exécution 
 `exec/prepareForBDT.cxx` :
 ```
+cd $NNH_HOME/analysis/exe
+```
+```
 ./bin/prepareForBDT
 ```
 ### Pré-requis 
