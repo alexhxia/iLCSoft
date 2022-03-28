@@ -60,7 +60,7 @@ tree->Scan()
 ```
 ## Sur plusieurs fichiers
 ```
-cd $NNH_HOME/analysis/script
+cd $NNH_HOME/processor/script
 ```
 Exemple pour les processus `402007` `402008` :
 ```
