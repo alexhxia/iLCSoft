@@ -1,4 +1,6 @@
-# Analysis 
+# analysis 
+
+Avant d'exécuter `analysis` il faut avoir générer les fichiers root avec `processor`.
 
 ## Préparation de l'environnement
 ```
@@ -34,7 +36,9 @@ make install
 ```
 ### Pré-requis 
 Les paquets `joblib`, `pandas`, `numpy`, `scipy`, `sklearn`, `cppyy`, `libPyROOT` et `ROOT`
-
+```
+pip install joblib pandas numpy scipy sklearn cppyy
+```
 ### Cas de ROOT
 
 ### Lancement
