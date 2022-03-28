@@ -1,4 +1,5 @@
 # processor
+Si les fichiers sont dans le dossier `/gridgroup/ilc/nnhAnalysisFiles/AHCAL`.
 
 ## Installation
 
@@ -6,13 +7,9 @@ Télécharger le git du programme de la branch `refractor`
 ```
 git clone -branch refractor https://github.com/ggarillot/nnhAnalysis.git
 ```
-```
-cd nnhAnalysis/processor
-```
 ## Compilation
-
 ```
-mkdir Build && cd Build
+cd nnhAnalysis/processor && mkdir Build && cd Build
 ```
 ```
 cmake -C $ILCSOFT/ILCSoft.cmake ..
@@ -43,11 +40,11 @@ export MARLIN_DLL=$MARLIN_DLL:$PWD/lib/libnnhProcessor.so
 
 ## Avec un fichier
 ```
-cd script/
+cd $NNH_HOME/processor/script/
 ```
-Dans le programme `NNH_steer.xml ` emplacer les fichiers `input.slcio` et `output.root` par les noms souhaités.
+Dans le programme `NNH_steer.xml ` modifier `input.slcio` et `output.root` par les chemins souhaités, soit le fichier des données et le fichier de sortie.
 
-On lance le programme qui transforme un fichier .slcio et fichier .root
+On peut à présent lancer le programme qui construit un fichier `.root` à partir d'un fichier `.slcio` :
 ```
 Marlin NNH_steer.xml 
 ```
@@ -62,11 +59,14 @@ tree->Scan()
 ```
 cd $NNH_HOME/processor/script
 ```
+### Liste de quelques processus :
 Exemple pour les processus `402007` `402008` :
 ```
 $ python3 launchNNHProcessor.py -n 10 -p 402007 402008 -i $NNH_ANALYSIS_INPUTFILES -o NNH_ANALYSIS_OUTFILES
 ```
-Pour tous les processus :
+### Pour tous les processus :
 ```
 $ python3 launchNNHProcessor.py -n 10 -i $NNH_ANALYSIS_INPUTFILES -o NNH_ANALYSIS_OUTFILES
 ```
+## Suite 
+Continuer dans la partie `analysis`.
