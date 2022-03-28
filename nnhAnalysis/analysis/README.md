@@ -11,6 +11,12 @@ Il faut un environnement au moins sous `python 3.9` et avec `root`.
 export NNH_HOME=~/nnhAnalysis
 ```
 ```
+export NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/
+```
+```
+export NNH_ANALYSIS_OUTFILES=$NNH_HOME/output
+```
+```
 mkdir $NNH_HOME/analysis/DATA $NNH_HOME/analysis/Build
 ```
 ```
