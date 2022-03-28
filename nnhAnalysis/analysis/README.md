@@ -33,7 +33,7 @@ make install
 ./bin/prepareForBDT
 ```
 ### Pré-requis 
-Les paquets `joblib`, `pandas`, `numpy`, `scipy`, `sklearn` et `ROOT`
+Les paquets `joblib`, `pandas`, `numpy`, `scipy`, `sklearn`, `cppyy`, `libPyROOT` et `ROOT`
 
 ### Cas de ROOT
 
