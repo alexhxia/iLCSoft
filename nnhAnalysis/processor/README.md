@@ -31,7 +31,10 @@ source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
 export NNH_HOME=/path/to/nnhAnalysis
 ```
 ```
-export NNH_ANALYSIS_FILES_HOME=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/
+export NNH_ANALYSIS_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/
+```
+```
+export NNH_ANALYSIS_OUTFILES=~/nnhAnalysisFiles/
 ```
 ```
 export MARLIN_DLL=$MARLIN_DLL:$PWD/lib/libnnhProcessor.so
