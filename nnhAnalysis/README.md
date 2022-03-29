@@ -13,7 +13,7 @@ Un exemple de nom d'un fichier avec son chemin :
 ```
 
 ## `processus`
-On traite une première fois les fichier LCIO dans la partie `processor` afin obtenir un fichiers ROOT par processus (cf `processor/README`), qui sera placer dans un dossier `OUTPUT`.
+On traite une première fois les fichiers LCIO dans la partie `processor` afin obtenir un fichier ROOT par processus (cf `processor/README`), qui sera placer dans un dossier `OUTPUT`.
 
 NB : les commandes pour avoir un environnement opérationnel, à refaire à chaque ouverture (si ce n'est pas la première exécution) :
 ```
