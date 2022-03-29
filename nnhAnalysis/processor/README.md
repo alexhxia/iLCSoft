@@ -28,7 +28,7 @@ source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
 export NNH_HOME=~/nnhAnalysis
 ```
 ```
-export NNH_ANALYSIS_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/
+export NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/
 ```
 ```
 export NNH_PROCESSOR_OUTFILES=$NNH_HOME/output
@@ -60,14 +60,14 @@ cd $NNH_HOME/processor/script
 ### Liste de quelques processus :
 Exemple pour les processus `402007` `402008` :
 ```
-$ python3 launchNNHProcessor.py -n 10 -p 402007 402008 -i $NNH_ANALYSIS_INPUTFILES -o NNH_ANALYSIS_OUTFILES
+$ python3 launchNNHProcessor.py -n 10 -p 402007 402008 -i $NNH_PROCESSOR_INPUTFILES -o NNH_PROCESSOR_OUTFILES
 ```
 ### Convertir tous les processus
 ```
 cd $NNH_HOME/processor/script
 ```
 ```
-$ python3 launchNNHProcessor.py -n 10 -i $NNH_ANALYSIS_INPUTFILES -o NNH_ANALYSIS_OUTFILES
+$ python3 launchNNHProcessor.py -n 10 -i $NNH_PROCESSOR_INPUTFILES -o NNH_PROCESSOR_OUTFILES
 ```
 # Suite 
 Continuer dans la partie `analysis`.
