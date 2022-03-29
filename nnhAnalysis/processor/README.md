@@ -9,7 +9,7 @@ git clone -branch refractor https://github.com/ggarillot/nnhAnalysis.git
 ```
 ## Compilation
 ```
-cd nnhAnalysis/processor && mkdir Build && cd Build
+cd nnhAnalysis/processor && mkdir BUILD && cd BUILD
 ```
 ```
 cmake -C $ILCSOFT/ILCSoft.cmake ..
@@ -31,7 +31,7 @@ export NNH_HOME=~/nnhAnalysis
 export NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/
 ```
 ```
-export NNH_PROCESSOR_OUTFILES=$NNH_HOME/output
+export NNH_PROCESSOR_OUTFILES=$NNH_HOME/OUTPUT
 ```
 ```
 export MARLIN_DLL=$MARLIN_DLL:$PWD/lib/libnnhProcessor.so
@@ -57,15 +57,15 @@ tree->Scan()
 ```
 cd $NNH_HOME/processor/script
 ```
+```
+mkdir $NNH_HOME/OUTPUT
+```
 ### Liste de quelques processus :
 Exemple pour les processus `402007` `402008` :
 ```
 $ python3 launchNNHProcessor.py -n 10 -p 402007 402008 -i $NNH_PROCESSOR_INPUTFILES -o NNH_PROCESSOR_OUTFILES
 ```
 ### Convertir tous les processus
-```
-cd $NNH_HOME/processor/script
-```
 ```
 $ python3 launchNNHProcessor.py -n 10 -i $NNH_PROCESSOR_INPUTFILES -o NNH_PROCESSOR_OUTFILES
 ```
