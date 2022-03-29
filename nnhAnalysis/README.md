@@ -23,10 +23,10 @@ source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
 export  NNH_HOME=~/nnhAnalysis \
         NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
         NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
-        NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/OUTPUT
-        NNH_ROOTFILES=$NNH_HOME/OUTPUT
-        NNH_ANALYSIS_INPUTFILES=$NNH_HOME/OUTPUT
-        NNH_ANALYSIS_OUTPUTFILES=$NNH_HOME/analysis/DATA
+        NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/OUTPUT \
+        NNH_ROOTFILES=$NNH_HOME/OUTPUT \
+        NNH_ANALYSIS_INPUTFILES=$NNH_HOME/OUTPUT \
+        NNH_ANALYSIS_OUTPUTFILES=$NNH_HOME/analysis/DATA \
         NNH_DATA=$NNH_HOME/analysis/DATA
 ```
 ```
