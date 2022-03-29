@@ -1,15 +1,24 @@
 # processor
-Si les fichiers sont dans le dossier `/gridgroup/ilc/nnhAnalysisFiles/AHCAL`.
-
+Ce tuto considère que les fichiers sont en local dans le dossier `/gridgroup/ilc/nnhAnalysisFiles/AHCAL`.
+```
+export NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/
+```
 ## Installation
 
-Télécharger le git du programme de la branch `refractor`
+Pour récupérer le projet déjà existant, télécharger la branch `refractor` du git de `ggarillot` :
 ```
 git clone -branch refractor https://github.com/ggarillot/nnhAnalysis.git
 ```
+```
+export NNH_HOME=~/nnhAnalysis
+```
 ## Compilation
 ```
-cd nnhAnalysis/processor && mkdir BUILD && cd BUILD
+cd $NNH_HOME/processor && mkdir BUILD && cd BUILD
+```
+À faire obligatoirement avant le `cmake` :
+```
+source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
 ```
 ```
 cmake -C $ILCSOFT/ILCSoft.cmake ..
@@ -20,19 +29,7 @@ make
 ```
 make install
 ```
-## Préparation de l'environnement (À refaire à chaque fois)
-```
-source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
-```
-```
-export NNH_HOME=~/nnhAnalysis
-```
-```
-export NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/
-```
-```
-export NNH_PROCESSOR_OUTPUTFILES=~/nnhAnalysis/OUTPUT
-```
+La compilation génère une bibliotèque `libnnhProcessor` qu'il faut impérativement ajouter dans le `MARLIN_DLL`. Donc avant d'exécuter les commandes du programme, il faut donc obligatoirement :
 ```
 export MARLIN_DLL=$MARLIN_DLL:~/nnhAnalysis/processor/lib/libnnhProcessor.so
 ```
@@ -40,13 +37,13 @@ export MARLIN_DLL=$MARLIN_DLL:~/nnhAnalysis/processor/lib/libnnhProcessor.so
 ```
 cd $NNH_HOME/processor/script/
 ```
-Dans le programme `NNH_steer.xml ` modifier `input.slcio` et `output.root` par les chemins souhaités, soit le fichier des données et le fichier de sortie.
+Dans le programme `NNH_steer.xml `, il faut adapter le fichier d'entrée `input.slcio` et  le fichier de sortie `output.root` par les chemins souhaités.
 
-On peut à présent lancer le programme qui construit un fichier `.root` à partir d'un fichier `.slcio` :
+On peut à présent lancer ce programme qui construit un fichier `.root` à partir d'un fichier `.slcio` :
 ```
 Marlin NNH_steer.xml 
 ```
-Vérifier le contenu du nouveau fichier .root
+NB :Vérifier le contenu du nouveau fichier .root
 ```
 root -l
 TFile *f = TFile::open("XXX.root")
@@ -57,17 +54,38 @@ tree->Scan()
 ```
 cd $NNH_HOME/processor/script
 ```
+On crée un dossier pour tous les fichiers ROOTs qui seront générer :
 ```
 mkdir $NNH_HOME/OUTPUT
 ```
-### Liste de quelques processus :
-Exemple pour les processus `402007` `402008` :
 ```
-python3 launchNNHProcessor.py -n 10 -p 402007 402008 -i $NNH_PROCESSOR_INPUTFILES -o NNH_PROCESSOR_OUTFILES
+export NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/OUTPUT
+```
+Pour rappel, les fichier d'entrée LCIO sont `/gridgroup/ilc/nnhAnalysisFiles/AHCAL/` : 
+```
+export NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/
+```
+### Convertir quelques processus :
+Utiliser le paramètre `-p num_processus`. Par exemple pour les processus `402007` `402008` :
+```
+python3 launchNNHProcessor.py -n 10 -p 402007 402008 -i $NNH_PROCESSOR_INPUTFILES -o $NNH_PROCESSOR_OUTPUTFILES
 ```
 ### Convertir tous les processus
 ```
-python3 launchNNHProcessor.py -n 10 -i $NNH_PROCESSOR_INPUTFILES -o NNH_PROCESSOR_OUTFILES
+python3 launchNNHProcessor.py -n 100 -i $NNH_PROCESSOR_INPUTFILES -o $NNH_PROCESSOR_OUTFILES
 ```
 # Suite 
 Continuer dans la partie `analysis`.
+
+## À refaire à chaque fois que l'on ouvre le terminal ou une session `ssh` :
+```
+source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
+```
+```
+export  NNH_HOME=~/nnhAnalysis \
+        NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
+        NNH_PROCESSOR_OUTPUTFILES=~/nnhAnalysis/OUTPUT
+```
+```
+export MARLIN_DLL=$MARLIN_DLL:~/nnhAnalysis/processor/lib/libnnhProcessor.so
+```
