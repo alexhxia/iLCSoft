@@ -12,25 +12,25 @@ source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
 export  NNH_HOME=~/nnhAnalysis \
         NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
         NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
-        NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/OUTPUT
-        NNH_ROOTFILES=$NNH_HOME/OUTPUT
-        NNH_ANALYSIS_INPUTFILES=$NNH_HOME/OUTPUT
-        NNH_ANALYSIS_OUTPUTFILES=$NNH_HOME/analysis/DATA
+        NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/OUTPUT \
+        NNH_ROOTFILES=$NNH_HOME/OUTPUT \
+        NNH_ANALYSIS_INPUTFILES=$NNH_HOME/OUTPUT \
+        NNH_ANALYSIS_OUTPUTFILES=$NNH_HOME/analysis/DATA \
         NNH_DATA=$NNH_HOME/analysis/DATA
 ```
 
 ```
-mkdir $NNH_HOME/analysis/DATA $NNH_HOME/analysis/Build
+mkdir $NNH_DATA $NNH_HOME/analysis/BUILD
 ```
 ```
-hadd $NNH_HOME/analysis/DATA/DATA.root $NNH_HOME/output/*.root
+hadd $NNH_DATA/DATA.root NNH_ROOTFILES/*.root
 ```
 ```
 source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
 ```
 ## Compilation
 ```
-cd $NNH_HOME/analysis/Build
+cd $NNH_HOME/analysis/BUILD
 ```
 ```
 cmake -C $ILCSOFT/ILCSoft.cmake ..
@@ -50,9 +50,9 @@ cd $NNH_HOME/analysis
 ./bin/prepareForBDT
 ```
 ### Pré-requis 
-Les paquets `joblib`, `pandas`, `numpy`, `scipy`, `sklearn`, `cppyy`, `libPyROOT` et `ROOT`
+Les paquets `joblib`, `pandas`, `numpy`, `sklearn`, `cppyy` et `ROOT`
 ```
-install joblib pandas numpy scipy sklearn cppyy
+install joblib pandas numpy sklearn cppyy
 ```
 ### Lancement
 Depuis le dossier `analysis/python` :
@@ -67,4 +67,11 @@ python3 launchBDT_bb.py
 ```
 ```
 python3 launchBDT_WW.py
+```
+NB : si des problèmes persistes, vérifier que vous êtes en `python>=3.8` et en `ROOT>=6.24` :
+```
+python --version 
+```
+```
+root --version
 ```
