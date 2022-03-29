@@ -34,7 +34,7 @@ export NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/
 export NNH_PROCESSOR_OUTFILES=$NNH_HOME/OUTPUT
 ```
 ```
-export MARLIN_DLL=$MARLIN_DLL:$PWD/lib/libnnhProcessor.so
+export MARLIN_DLL=$MARLIN_DLL:$NNH_HOME/processor/lib/libnnhProcessor.so
 ```
 ## Convertir un seul fichier
 ```
