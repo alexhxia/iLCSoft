@@ -5,7 +5,7 @@ export NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/
 ```
 ## Installation
 
-Pour récupérer le projet déjà existant, télécharger la branch `refractor` du git de `ggarillot` :
+Pour récupérer le projet déjà existant, télécharger la branch `refractor` du projet `nnhAnalysis` du git de `ggarillot` :
 ```
 git clone -branch refractor https://github.com/ggarillot/nnhAnalysis.git
 ```
