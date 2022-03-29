@@ -1,7 +1,8 @@
 # processor
 Ce tuto considère que les fichiers sont en local dans le dossier `/gridgroup/ilc/nnhAnalysisFiles/AHCAL`.
 ```
-export NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/
+export NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
+       NNH_PROCESSUS_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/
 ```
 ## Installation
 
@@ -56,10 +57,10 @@ cd $NNH_HOME/processor/script
 ```
 On crée un dossier pour tous les fichiers ROOTs qui seront générer :
 ```
-mkdir $NNH_HOME/OUTPUT
+mkdir $NNH_HOME/ROOT
 ```
 ```
-export NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/OUTPUT
+export NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/ROOT
 ```
 Pour rappel, les fichier d'entrée LCIO sont `/gridgroup/ilc/nnhAnalysisFiles/AHCAL/` : 
 ```
@@ -83,8 +84,10 @@ source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
 ```
 ```
 export  NNH_HOME=~/nnhAnalysis \
+        NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
         NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
-        NNH_PROCESSOR_OUTPUTFILES=~/nnhAnalysis/OUTPUT
+        NNH_PROCESSOR_OUTPUTFILES=~/nnhAnalysis/OUTPUT \
+        NNH_ROOTFILES=~/nnhAnalysis/OUTPUT
 ```
 ```
 export MARLIN_DLL=$MARLIN_DLL:~/nnhAnalysis/processor/lib/libnnhProcessor.so
