@@ -13,7 +13,7 @@ Un exemple de nom d'un fichier avec son chemin :
 ## `processus`
 On traite une première fois les fichier LCIO dans la partie `processor` afin obtenir un fichiers ROOT par processus (cf `processor/README`), qui sera placer dans un dossier `OUTPUT`.
 
-NB : les commandes pour avoir un environnement opérationnel, à refaire à chaque ouverture :
+NB : les commandes pour avoir un environnement opérationnel, à refaire à chaque ouverture (si ce n'est pas la première exécution) :
 ```
 source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
 ```
@@ -22,3 +22,7 @@ export  NNH_HOME=~/nnhAnalysis \
         NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
         NNH_PROCESSOR_OUTPUTFILES=~/nnhAnalysis/OUTPUT
 ```
+```
+export MARLIN_DLL=$MARLIN_DLL:~/nnhAnalysis/processor/lib/libnnhProcessor.so
+```
+## `analysis`
