@@ -25,7 +25,7 @@ export  NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
 mkdir $NNH_DATA $NNH_HOME/analysis/BUILD
 ```
 ```
-hadd $NNH_DATA/DATA.root NNH_ROOTFILES/*.root
+hadd $NNH_DATA/DATA.root $NNH_ROOTFILES/*.root
 ```
 ```
 source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
@@ -67,7 +67,9 @@ Il faut changer de terminal ou redémarer la session car la commande
 ne doit pas avoir été exécuter. Mais il ne faut pas oublier de ré-export les variables d'environnement :
 ```
 export  NNH_HOME=~/nnhAnalysis \
-        NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
+```
+```
+export  NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
         NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
         NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/OUTPUT \
         NNH_ROOTFILES=$NNH_HOME/OUTPUT \
