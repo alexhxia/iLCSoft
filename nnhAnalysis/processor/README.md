@@ -31,7 +31,7 @@ export NNH_HOME=~/nnhAnalysis
 export NNH_ANALYSIS_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/
 ```
 ```
-export NNH_ANALYSIS_OUTFILES=$NNH_HOME/output
+export NNH_PROCESSOR_OUTFILES=$NNH_HOME/output
 ```
 ```
 export MARLIN_DLL=$MARLIN_DLL:$PWD/lib/libnnhProcessor.so
