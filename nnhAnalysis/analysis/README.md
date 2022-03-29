@@ -9,8 +9,10 @@ Il faut un environnement au moins sous `python 3.9` et avec `root`.
 source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
 ```
 ```
-export  NNH_HOME=~/nnhAnalysis \
-        NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
+export  NNH_HOME=~/nnhAnalysis 
+```
+```
+export  NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
         NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
         NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/OUTPUT \
         NNH_ROOTFILES=$NNH_HOME/OUTPUT \
