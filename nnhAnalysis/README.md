@@ -5,10 +5,12 @@ Les données LCIO sont stockées localement dans le dossier :
 ```
 /gridgroup/ilc/nnhAnalysisFiles/AHCAL/
 ```
-Puis chaque fichier est trié dans des sous dossier en fonction de leur numéro de processus.
+Puis chaque fichier est trié dans des sous-dossiers en fonction de leur numéro de processus.
 
 Un exemple de nom d'un fichier avec son chemin :
-``` /gridgroup/ilc/nnhAnalysisFiles/402001/rv02-02.sv02-02.mILD_l5_o1_v02.E250-SetA.I402001.Pe1e1h.eL.pR.n000.d_dstm_15089_0_MINI.slcio ```
+``` 
+/gridgroup/ilc/nnhAnalysisFiles/402001/rv02-02.sv02-02.mILD_l5_o1_v02.E250-SetA.I402001.Pe1e1h.eL.pR.n000.d_dstm_15089_0_MINI.slcio 
+```
 
 ## `processus`
 On traite une première fois les fichier LCIO dans la partie `processor` afin obtenir un fichiers ROOT par processus (cf `processor/README`), qui sera placer dans un dossier `OUTPUT`.
