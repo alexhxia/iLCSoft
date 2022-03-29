@@ -6,14 +6,19 @@ Il faut un environnement au moins sous `python 3.9` et avec `root`.
 
 ## Préparation de l'environnement
 ```
-export NNH_HOME=~/nnhAnalysis
+source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
 ```
 ```
-export NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/
+export  NNH_HOME=~/nnhAnalysis \
+        NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
+        NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
+        NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/OUTPUT
+        NNH_ROOTFILES=$NNH_HOME/OUTPUT
+        NNH_ANALYSIS_INPUTFILES=$NNH_HOME/OUTPUT
+        NNH_ANALYSIS_OUTPUTFILES=$NNH_HOME/analysis/DATA
+        NNH_DATA=$NNH_HOME/analysis/DATA
 ```
-```
-export NNH_ANALYSIS_OUTFILES=$NNH_HOME/output
-```
+
 ```
 mkdir $NNH_HOME/analysis/DATA $NNH_HOME/analysis/Build
 ```
