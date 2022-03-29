@@ -1,6 +1,6 @@
 # analysis 
 
-Avant d'exécuter `analysis` il faut avoir générer les fichiers root avec `processor`.
+Avant d'exécuter `analysis` il faut avoir générer les fichiers ROOTs (voir la partie `processor`).
 
 Il faut un environnement au moins sous `python 3.9` et avec `root`.
 
