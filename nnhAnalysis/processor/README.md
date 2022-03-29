@@ -63,11 +63,11 @@ mkdir $NNH_HOME/OUTPUT
 ### Liste de quelques processus :
 Exemple pour les processus `402007` `402008` :
 ```
-$ python3 launchNNHProcessor.py -n 10 -p 402007 402008 -i $NNH_PROCESSOR_INPUTFILES -o NNH_PROCESSOR_OUTFILES
+python3 launchNNHProcessor.py -n 10 -p 402007 402008 -i $NNH_PROCESSOR_INPUTFILES -o NNH_PROCESSOR_OUTFILES
 ```
 ### Convertir tous les processus
 ```
-$ python3 launchNNHProcessor.py -n 10 -i $NNH_PROCESSOR_INPUTFILES -o NNH_PROCESSOR_OUTFILES
+python3 launchNNHProcessor.py -n 10 -i $NNH_PROCESSOR_INPUTFILES -o NNH_PROCESSOR_OUTFILES
 ```
 # Suite 
 Continuer dans la partie `analysis`.
