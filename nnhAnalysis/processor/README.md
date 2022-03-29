@@ -72,7 +72,7 @@ python3 launchNNHProcessor.py -n 10 -p 402007 402008 -i $NNH_PROCESSOR_INPUTFILE
 ```
 ### Convertir tous les processus
 ```
-python3 launchNNHProcessor.py -n 100 -i $NNH_PROCESSOR_INPUTFILES -o $NNH_PROCESSOR_OUTFILES
+python3 launchNNHProcessor.py -n 100 -i $NNH_PROCESSOR_INPUTFILES -o $NNH_PROCESSOR_OUTPUTFILES
 ```
 # Suite 
 Continuer dans la partie `analysis`.
