@@ -59,9 +59,20 @@ Depuis le dossier `analysis/python` :
 ```
 cd $NNH_HOME/analysis/python
 ```
-#### Attention redémarrer la session car la commande 
+#### Attention changer de terminal 
+Il faut changer de terminal ou redémarer la session car la commande 
 `source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh`
-ne doit pas avoir été exécuter. 
+ne doit pas avoir été exécuter. Mais il ne faut pas oublier de ré-export les variables d'environnement :
+```
+export  NNH_HOME=~/nnhAnalysis \
+        NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
+        NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
+        NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/OUTPUT \
+        NNH_ROOTFILES=$NNH_HOME/OUTPUT \
+        NNH_ANALYSIS_INPUTFILES=$NNH_HOME/OUTPUT \
+        NNH_ANALYSIS_OUTPUTFILES=$NNH_HOME/analysis/DATA \
+        NNH_DATA=$NNH_HOME/analysis/DATA
+```
 ```
 python3 launchBDT_bb.py
 ```
