@@ -15,8 +15,8 @@ export  NNH_HOME=~/nnhAnalysis
 export  NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
         NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
         NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/OUTPUT \
-        NNH_ROOTFILES=$NNH_HOME/OUTPUT \
-        NNH_ANALYSIS_INPUTFILES=$NNH_HOME/OUTPUT \
+        NNH_ROOTFILES=$NNH_HOME/ROOT \
+        NNH_ANALYSIS_INPUTFILES=$NNH_HOME/ROOT \
         NNH_ANALYSIS_OUTPUTFILES=$NNH_HOME/analysis/DATA \
         NNH_DATA=$NNH_HOME/analysis/DATA
 ```
