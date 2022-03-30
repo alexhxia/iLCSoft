@@ -9,27 +9,24 @@ Il faut un environnement au moins sous `python 3.9` et avec `root`.
 source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
 ```
 ```
-export  NNH_HOME=~/nnhAnalysis 
+export  NNH_HOME=~/nnhAnalysis \
+        NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
+        NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL
 ```
 ```
-export  NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
-        NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
-        NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/OUTPUT \
+export  NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/OUTPUT \
         NNH_ROOTFILES=$NNH_HOME/ROOT \
         NNH_ANALYSIS_INPUTFILES=$NNH_HOME/ROOT \
         NNH_ANALYSIS_OUTPUTFILES=$NNH_HOME/analysis/DATA \
         NNH_DATA=$NNH_HOME/analysis/DATA
 ```
-
 ```
 mkdir $NNH_DATA $NNH_HOME/analysis/BUILD
 ```
 ```
 hadd $NNH_DATA/DATA.root $NNH_ROOTFILES/*.root
 ```
-```
-source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
-```
+
 ## Compilation
 ```
 cd $NNH_HOME/analysis/BUILD
@@ -67,11 +64,11 @@ Il faut changer de terminal ou redémarer la session car la commande
 ne doit pas avoir été exécuter. Mais il ne faut pas oublier de ré-export les variables d'environnement :
 ```
 export  NNH_HOME=~/nnhAnalysis \
+        NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
+        NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/
 ```
 ```
-export  NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
-        NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
-        NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/OUTPUT \
+export  NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/OUTPUT \
         NNH_ROOTFILES=$NNH_HOME/OUTPUT \
         NNH_ANALYSIS_INPUTFILES=$NNH_HOME/OUTPUT \
         NNH_ANALYSIS_OUTPUTFILES=$NNH_HOME/analysis/DATA \
@@ -83,7 +80,7 @@ python3 launchBDT_bb.py
 ```
 python3 launchBDT_WW.py
 ```
-NB : si des problèmes persistes, vérifier que vous êtes en `python>=3.8` et en `ROOT>=6.24` :
+NB : si des problèmes persistes, vérifier que vous êtes en `python>=3.9` et en `ROOT>=6.24` :
 ```
 python --version 
 ```
