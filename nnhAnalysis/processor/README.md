@@ -32,7 +32,7 @@ make install
 ```
 La compilation génère une bibliotèque `libnnhProcessor` qu'il faut impérativement ajouter dans le `MARLIN_DLL`. Donc avant d'exécuter les commandes du programme, il faut donc obligatoirement :
 ```
-export MARLIN_DLL=$MARLIN_DLL:~/nnhAnalysis/processor/lib/libnnhProcessor.so
+export MARLIN_DLL=$MARLIN_DLL:$NNH_HOME/processor/lib/libnnhProcessor.so
 ```
 ## Convertir un seul fichier
 ```
