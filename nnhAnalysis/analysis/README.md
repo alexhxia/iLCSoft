@@ -10,7 +10,7 @@ source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
 ```
 ```
 export  NNH_HOME=~/nnhAnalysis \
-        NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
+        NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL \
         NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL
 ```
 ```
@@ -64,7 +64,7 @@ Il faut changer de terminal ou redémarer la session car la commande
 ne doit pas avoir été exécuter. Mais il ne faut pas oublier de ré-export les variables d'environnement :
 ```
 export  NNH_HOME=~/nnhAnalysis \
-        NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/ \
+        NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL \
         NNH_PROCESSOR_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL/
 ```
 ```
