@@ -25,7 +25,7 @@ export  NNH_HOME=~/nnhAnalysis \
         NNH_OUTPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/result
 ```
 ```     
-export  NNH_PROCESSOR_INPUTFILES$=$NNH_INPUTFILES \
+export  NNH_PROCESSOR_INPUTFILES=$NNH_INPUTFILES \
         NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/processor/RESULTS \
         NNH_ANALYSIS_INPUTFILES=$NNH_HOME/processor/RESULTS \
         NNH_ANALYSIS_OUTPUTFILES=$NNH_HOME/analysis/DATA
