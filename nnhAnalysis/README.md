@@ -13,24 +13,37 @@ Un exemple de nom d'un fichier avec son chemin :
 ```
 
 ## `processus`
-On traite une première fois les fichiers LCIO dans la partie `processor` afin obtenir un fichier ROOT par processus (cf `processor/README`), qui sera placer dans un dossier `OUTPUT`.
+On traite une première fois les fichiers LCIO dans la partie `processor` afin obtenir un fichier ROOT par processus (cf `processor/README`), qui sera placer dans un dossier `RESULTS`.
 
 NB : les commandes pour avoir un environnement opérationnel, à refaire à chaque ouverture :
 ```
 source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
 ```
 ```
-export  NNH_HOME=~/nnhAnalysis \
-        NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL \
-        NNH_OUTPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/result
+export  NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL \
+        NNH_OUTPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/result \
+        NNH_HOME=~/nnhAnalysis
 ```
 ```     
 export  NNH_PROCESSOR_INPUTFILES=$NNH_INPUTFILES \
-        NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/processor/RESULTS \
-        NNH_ANALYSIS_INPUTFILES=$NNH_HOME/processor/RESULTS \
-        NNH_ANALYSIS_OUTPUTFILES=$NNH_HOME/analysis/DATA
+        NNH_PROCESSOR_OUTPUTFILES=$NNH_HOME/processor/RESULTS 
 ```
 ```
 export MARLIN_DLL=$MARLIN_DLL:$NNH_HOME/processor/lib/libnnhProcessor.so
 ```
 ## `analysis`
+On traite une première fois les fichiers LCIO dans la partie `processor` afin obtenir un fichier ROOT par processus (cf `processor/README`), qui sera placer dans un dossier `RESULTS`.
+
+NB : les commandes pour avoir un environnement opérationnel, à refaire à chaque ouverture :
+```
+source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh
+```
+```
+export  NNH_INPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/AHCAL \
+        NNH_OUTPUTFILES=/gridgroup/ilc/nnhAnalysisFiles/result \
+        NNH_HOME=~/nnhAnalysis
+```
+```     
+export  NNH_ANALYSIS_INPUTFILES=$NNH_HOME/processor/RESULTS \
+        NNH_ANALYSIS_OUTPUTFILES=$NNH_HOME/analysis/DATA
+```
